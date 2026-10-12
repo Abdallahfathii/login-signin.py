@@ -15,32 +15,9 @@ on one page (purple palette `#BF81FD` / `#EBD6FF`), with light/dark mode.
 docker compose up --build
 ```
 
-- Frontend: http://localhost:8080
-- Backend API: http://localhost:8000/api/auth/
 
 ## Local development (without Docker)
 
-### Backend
-
-```bash
-cd backend
-python -m venv .venv
-.venv\Scripts\activate        # Windows
-pip install -r requirements.txt
-copy .env.example .env        # adjust as needed
-python manage.py migrate
-python manage.py runserver    # http://localhost:8000
-```
-
-Without `DATABASE_URL` set, SQLite (`backend/db.sqlite3`) is used automatically.
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev                   # http://localhost:5173 (proxies /api → :8000)
-```
 
 ## API
 
